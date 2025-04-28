@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color:rgb(0, 0, 0);
+    color:#e7e7e7;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+.img-gradient{
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+.layer-blur{
+    height:0;
+    width:30rem;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    box-shadow: 0 0 700px 15px white;
+    rotate: -30deg;
+    z-index: -1;
+
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    overflow: hidden;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    
+}
+header h1{
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-left: -5%;
+    
+}
+nav a{
+    font-size: 1 rem;
+    letter-spacing: 0.1rem;
+    transition: color .2s ease;
+    text-decoration: none;
+    color: inherit;
+    z-index: 999;
+
+}
+nav a:hover{
+    color: #a7a7a7;
+}
+
+.btn-sign-in{
+    background-color:#e7e7e7;
+    color:black;
+    padding: .8rem 2rem;
+    border-radius: 50px;
+    border:none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color .2s ease;
+    cursor: pointer;
+    z-index: 999;
+
+}
+.btn-sign-in:hover{
+    background-color:#a7a7a7 ;
+    color: black;
+}   
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(90vh - 6rem);
+    /* background-color: lightblue; */
+}
+.content{
+    max-width: 40rem;
+    /* background-color: rgb(230, 209, 173); */
+    margin-left: 10%;
+    z-index: 999;
+}
+.tag-box{
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, #FF7F50, #FFB6C1, #FFD700, #FFB6C1, #FF7F50);
+
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+@keyframes animationGradient{
+    to{
+        background-position: 200%;
+    }
+    
+}
+.tag-box .tag{
+    position: absolute;
+    inset:3px 3px 3px 3px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.tag-box .tag:hover{
+    color: #FF7F50
+}
+.content h1{
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin: 2rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.5);
+}
+.description{
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    max-width: 35rem;
+    color: rgb(200, 199, 199);
+    text-shadow: 0 0 10px rgba(32, 165, 189, 0.503);
+}
+.buttons{
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.btn-get-started{
+    /* background-color: #c33fc19a; */
+    color: white;
+    text-decoration: none;
+
+    border-radius: 50px;
+    /* border: 1px solid #c33fc19a; */
+    padding: .4rem 1.2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: .01em;
+    transition: background-color .2s ease;
+    cursor: pointer;
+}
+.btn-get-started:hover{
+    text-underline-offset: 10px ;
+    text-decoration: underline;
+    text-decoration-color: #c33fc19a;
+    text-decoration-thickness: 3px;
+}
+.btn-sign-in-2{
+    background-color:#4818476f;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: .4rem 1.2rem;
+    border-radius: 50px;
+    border:2px solid #d34dd3b4;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: .01em;
+    transition: background-color .2s ease;
+    cursor: pointer;
+}
+.btn-sign-in-2:hover{
+    background-color:  rgba(0, 0, 0, 0.444);
+    color: white;
+    
+}
+.robot-3d{
+    position: absolute;
+    top: 0;
+    right:-20%;
+    
+}
+
+
+@media(max-width: 1300px){
+    header{
+        padding: 1rem .5rem;
+    }
+    .content{
+        margin-top: 85%;
+    }
+    .robot-3d{
+        scale:.8;
+        top:-20%;
+        right:2;
+    }
+
+}
+@media(max-width: 768px){
+    header{
+        padding: 1rem .1rem;
+    }
+    nav{
+        display: none;
+    }
+    header h1{
+        font-size: 2rem;
+    }
+    .btn-sign-in{
+        padding: .6rem 1.5rem;
+        
+    }
+    .content{
+        margin-top: 25rem;
+    }
+    .robot-3d{
+        scale:.5;
+        top:-25%;
+        right:0;
+    }
+    .content{
+        max-width: 30rem;
+        margin-left: 10%;
+    }
+    .tag-box{
+        width: 12rem;
+        
+    }
+    .content h1{
+        font-size: 2.5rem;
+    }
+    .description{
+        font-size: 1rem;
+        
+    }
+    .btn-get-started{
+        font-size: .8rem;
+        padding: .5rem 1.2rem;
+    }
+    .btn-sign-in-2{
+        font-size: .8rem;
+        padding: .5rem 1.2rem;
+    }
+}
